@@ -17,7 +17,7 @@ inoremap bbb <Esc>
 nnoremap + <C-a>
 nnoremap - <C-x>
 
-"clear search highlights
+
 noremap <silent><Leader>/ :nohls<CR>
 
 "delete whitespacm
@@ -38,7 +38,6 @@ set shiftround "shift tabs to rounded tabstops
 set showmatch "show matching parentheses
 set ignorecase "ignore case in search
 set backspace=2 "have backspace work right
-
 set history=1000 "lines of command history to keep
 set undolevels=1000 "undo levels to keep
 set visualbell "use visual cue instead of audible
@@ -49,6 +48,8 @@ set autoread "reread files that have changed on disk
 set synmaxcol=1024 "syntax coloring on long lines sucks
 set cursorline "highlight the current line
 
+nnoremap <C-t> /\s\+$\\|\s\+\t\\|\s\+[^\t]\t\+\\|\s^\t* \+\\|^\t*\zs \+<CR>
+
 set foldmethod=syntax "set code folding to syntax style
 set foldenable "turn on code folding
 
@@ -56,4 +57,3 @@ set splitright splitbelow "new splits to right and below
 
 set laststatus=2
 set encoding=utf8
-
