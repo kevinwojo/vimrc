@@ -21,7 +21,7 @@ nnoremap - <C-x>
 noremap <silent><Leader>/ :nohls<CR>
 
 "delete whitespacm
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+autocmd BufWritePre :%s/\s\+$//<cr>:let @/=''<cr>
 
 "************************************
 "set up my options
@@ -31,7 +31,7 @@ set hlsearch "highlight searches
 set incsearch "search before hitting enter
 set number "show line nums
 set hidden "hide buffers instead of forcing closed
-set expandtab "tab inserts spaces
+set noexpandtab "use tabs not spaces
 set tabstop=2 "2 spaces for tab
 set autoindent "smart autoindent
 set shiftround "shift tabs to rounded tabstops
