@@ -7,7 +7,7 @@ au BufWritePost .vimrc so ~/.vimrc
 "set up color scheme
 "************************************
 set background=dark
-colorscheme elflord
+colorscheme badwolf 
 let g:solarized_underline=0
 
 "bbb to escape from insert mode
@@ -57,3 +57,5 @@ set splitright splitbelow "new splits to right and below
 
 set laststatus=2
 set encoding=utf8
+
+let &t_Co=256 " let vim know I want 256 colors! reeeee!!
