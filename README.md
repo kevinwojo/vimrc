@@ -9,4 +9,5 @@ my vim setup
 ## Useful commands
  * :ConqueTermSplit bash -> launches bash in a split window
  * :resize 15 -> squishes down the split
- 
+ * :%s/search/replace/gc -> asks Y/N confirmation for each replacement match
+
