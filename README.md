@@ -2,7 +2,7 @@
 my vim setup
 
 ## Installation
- - git clone <repoURL> .vim
+ - git clone <https://github.com/kevinwojo/vimrc.git> .vim
  - ln -s ~/.vimrc/__vimrc ~/.vimrc
  - ENJOY
 
