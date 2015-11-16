@@ -23,6 +23,11 @@ noremap <silent><Leader>/ :nohls<CR>
 "delete whitespacm
 autocmd BufWritePre :%s/\s\+$//<cr>:let @/=''<cr>
 
+" Don't fall back on no stupid arrow keys lazy ass
+noremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
 "************************************
 "set up my options
 "************************************
