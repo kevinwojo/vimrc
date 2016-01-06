@@ -28,6 +28,8 @@ noremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
+
+nnoremap pp :CtrlP <CR>
 "************************************
 "set up my options
 "************************************
@@ -64,3 +66,5 @@ set laststatus=2
 set encoding=utf8
 
 let &t_Co=256 " let vim know I want 256 colors! reeeee!!
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
