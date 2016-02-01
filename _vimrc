@@ -7,8 +7,10 @@ au BufWritePost .vimrc so ~/.vimrc
 "set up color scheme
 "************************************
 set background=dark
-colorscheme badwolf 
+colorscheme monochrome 
 let g:solarized_underline=0
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 "bbb to escape from insert mode
 inoremap bbb <Esc>
@@ -16,6 +18,8 @@ inoremap bbb <Esc>
 "increment and decrement
 nnoremap + <C-a>
 nnoremap - <C-x>
+
+noremap <Tab><Tab> gt
 
 
 noremap <silent><Leader>/ :nohls<CR>
