@@ -11,6 +11,8 @@ colorscheme monochrome
 let g:solarized_underline=0
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+execute pathogen#infect()
+
 
 "bbb to escape from insert mode
 inoremap bbb <Esc>
