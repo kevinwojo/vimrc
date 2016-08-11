@@ -15,6 +15,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
+Plugin 'PDV--phpDocumentor-for-Vim'
 
 "************************************
 "General vim options
@@ -25,7 +26,7 @@ au BufWritePost .vimrc so ~/.vimrc
 "set up color scheme
 "************************************
 set background=dark
-colorscheme monochrome 
+colorscheme molokai 
 let g:solarized_underline=0
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -54,6 +55,11 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 nnoremap pp :CtrlP <CR>
+
+" PHP Doc Plugin Mappings (D for documentation)
+inoremap <C-D> <ESC>:call PhpDocSingle()<CR>i
+nnoremap <C-D> :call PhpDocSingle()<CR>
+vnoremap <C-D> :call PhpDocRange()<CR>
 "************************************
 "set up my options
 "************************************
