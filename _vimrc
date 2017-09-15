@@ -12,9 +12,9 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'tpope/vim-fugitive'
-Plugin 'kien/ctrlp.vim'
-Plugin 'PDV--phpDocumentor-for-Vim'
+" Plugin 'tpope/vim-fugitive'
+" Plugin 'kien/ctrlp.vim'
+" Plugin 'PDV--phpDocumentor-for-Vim'
 
 "************************************
 "General vim options
@@ -25,7 +25,7 @@ au BufWritePost .vimrc so ~/.vimrc
 "set up color scheme
 "************************************
 set background=dark
-colorscheme molokai 
+colorscheme monochrome 
 let g:solarized_underline=0
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
