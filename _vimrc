@@ -1,20 +1,15 @@
-"************************************
-" Vundle Stuff - Ik package mgmt
-" weak sauce ....
-"************************************
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-" Plugin 'tpope/vim-fugitive'
-" Plugin 'kien/ctrlp.vim'
-" Plugin 'PDV--phpDocumentor-for-Vim'
+ Plugin 'tpope/vim-fugitive'
+ Plugin 'kien/ctrlp.vim'
+ Plugin 'scrooloose/nerdtree'
+ Plugin 'sainnhe/vim-color-forest-night'
 
 "************************************
 "General vim options
@@ -25,40 +20,14 @@ au BufWritePost .vimrc so ~/.vimrc
 "set up color scheme
 "************************************
 set background=dark
-colorscheme monochrome 
+colorscheme forest-night
 let g:solarized_underline=0
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 execute pathogen#infect()
 
-
-"bbb to escape from insert mode
-inoremap bbb <Esc>
-
-"increment and decrement
-nnoremap + <C-a>
-nnoremap - <C-x>
-
-noremap <Tab><Tab> gt
-
-
-noremap <silent><Leader>/ :nohls<CR>
-
-"delete whitespacm
-autocmd BufWritePre :%s/\s\+$//<cr>:let @/=''<cr>
-
-" Don't fall back on no stupid arrow keys lazy ass
-noremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
-
 nnoremap pp :CtrlP <CR>
 
-" PHP Doc Plugin Mappings (D for documentation)
-inoremap <C-D> <ESC>:call PhpDocSingle()<CR>i
-nnoremap <C-D> :call PhpDocSingle()<CR>
-vnoremap <C-D> :call PhpDocRange()<CR>
 "************************************
 "set up my options
 "************************************
@@ -67,9 +36,9 @@ set hlsearch "highlight searches
 set incsearch "search before hitting enter
 set number "show line nums
 set hidden "hide buffers instead of forcing closed
-set noexpandtab "use tabs not spaces
-set tabstop=2 "2 spaces for tab
-set autoindent "smart autoindent
+"set noexpandtab "use tabs not spaces
+"set tabstop=2 "2 spaces for tab
+"set autoindent "smart autoindent
 set shiftround "shift tabs to rounded tabstops
 set showmatch "show matching parentheses
 set ignorecase "ignore case in search
@@ -84,10 +53,8 @@ set autoread "reread files that have changed on disk
 set synmaxcol=1024 "syntax coloring on long lines sucks
 set cursorline "highlight the current line
 
-nnoremap <C-t> /\s\+$\\|\s\+\t\\|\s\+[^\t]\t\+\\|\s^\t* \+\\|^\t*\zs \+<CR>
-
 set foldmethod=syntax "set code folding to syntax style
-set foldenable "turn on code folding
+set nofoldenable "turn on code folding
 
 set splitright splitbelow "new splits to right and below
 
