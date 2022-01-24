@@ -11,3 +11,5 @@ my vim setup
  * :resize 15 -> squishes down the split
  * :%s/search/replace/gc -> asks Y/N confirmation for each replacement match
 
+
+Testing
